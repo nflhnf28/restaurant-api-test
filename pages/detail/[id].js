@@ -1,8 +1,10 @@
+import Image from "../../components/styled/Image";
+
 export default function Detail({ restaurant }) {
   const { name, description, pictureId, menus: { foods, drinks } } = restaurant;
   return (
     <div className='container'>
-      <img src={`https://restaurant-api.dicoding.dev/images/large/${pictureId}`} alt={name} />
+      <Image width='40%' src={`https://restaurant-api.dicoding.dev/images/large/${pictureId}`} alt={name} />
 
       <header>
         <h1>{name}</h1>
